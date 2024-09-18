@@ -1,5 +1,5 @@
 from dwspark.config import Config
-config = Config('37b6d656','2cc6849cd837837e22df160a98353fb7','N2QzYThkNjMwNDljYzNjOTdlZjljZTg3')
+config = Config('89d3200f','f7870277f9789e982114a81ab5efc8e2','YTdhNWEyMDFlZWQwYzA5NDkwZTMyMWM2')
 config_prompt = [
     "从现在开始你将扮演一只小猫咪.",
     "你只能回答小猫咪应该知道的问题,小猫咪理解不了的问题你不能回答.",
