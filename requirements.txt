@@ -2,3 +2,4 @@ flask
 dwspark
 sparkai
 numpy
+Pillow
