@@ -1,0 +1,158 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 聊天界面的容器 */
+#chat-wrapper {
+    width: 100%;
+    max-width: 700px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 聊天记录的显示区域 */
+#chat-container {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fafafa;
+    scroll-behavior: smooth;
+}
+
+/* 消息气泡的基本样式 */
+.chat-message {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    max-width: 75%;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 用户消息气泡样式，靠右对齐 */
+.user-message {
+    justify-content: flex-end;
+    margin-left: auto; /* 将用户的消息靠右对齐 */
+}
+
+.user-message .message-bubble {
+    background-color: #9fe3a1;
+    color: #ffffff;
+    border-top-right-radius: 0;
+}
+
+/* 机器人消息气泡样式，靠左对齐 */
+.bot-message {
+    justify-content: flex-start;
+    margin-right: auto; /* 将机器人的消息靠左对齐 */
+}
+
+.bot-message .message-bubble {
+    background-color: #e2e2e2;
+    color: #333333;
+    border-top-left-radius: 0;
+}
+
+/* 消息气泡的内容样式 */
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片消息样式 */
+.chat-message img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+.chat-message img:hover {
+    transform: scale(1.05);
+}
+
+/* 输入框和按钮的容器 */
+#input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    align-items: center;
+}
+
+/* 文件上传按钮 */
+#fileInput {
+    display: none;
+}
+
+#uploading-icon, #upload-complete-icon {
+    margin-right: 10px;
+}
+
+/* 消息输入框样式 */
+#userMessage {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+#userMessage:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+
+/* 发送按钮样式 */
+#sendButton {
+    padding: 12px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#sendButton:active {
+    transform: scale(0.95);
+}
+
+#sendButton:hover {
+    background-color: #0056b3;
+}
