@@ -1,0 +1,4 @@
+flask
+dwspark
+sparkai
+numpy
